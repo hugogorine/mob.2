@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Paralelo Zero Imóveis — comprar e alugar em Macapá</title>
+  <meta name="description" content="Apartamentos, casas, salas comerciais, terrenos e lançamentos em Macapá. Do kitnet à casa com piscina, todo imóvel com fotos, ficha completa e planta na mesma escala.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=70"
+        imagesrcset="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=70 800w, https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=70 1600w, https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=2400&q=70 2400w" imagesizes="100vw">
+</head>
+<body>
+  <header class="topo" data-topo></header>
+
+  <main id="conteudo">
+    <!-- Hero: prancha + carimbo -->
+    <section class="hero container" aria-labelledby="titulo-hero">
+      <div class="prancha">
+        <div class="prancha__foto">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=70"
+               srcset="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=70 800w, https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=70 1600w, https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=2400&q=70 2400w"
+               sizes="100vw" width="1600" height="1067" fetchpriority="high"
+               alt="Sala de um apartamento pequeno, com sofá cinza, mesa de madeira e plantas junto à janela">
+          <a class="prancha__legenda" href="imovel.html?cod=PZ-0412">Na foto: 42 m² no Trem · R$ 189.000</a>
+        </div>
+        <div class="paralelo" style="bottom: calc(10px + var(--carimbo-h, 300px))" aria-hidden="true"><span>0°02′ N</span></div>
+        <div class="carimbo">
+          <div class="carimbo__titulo"><h1 id="titulo-hero">Encontrar o lugar certo muda tudo.</h1></div>
+          <p class="carimbo__sub">Do primeiro apartamento ao imóvel dos próximos planos. Imóveis para comprar e alugar em Macapá, todos apresentados com o mesmo cuidado.</p>
+          <div class="carimbo__cel">Cidade<b>Macapá, AP</b></div>
+          <div class="carimbo__cel">Latitude<b>0°02′ N</b></div>
+          <div class="carimbo__cel">Disponíveis<b data-total>24 imóveis</b></div>
+          <div class="carimbo__acao"><a class="btn btn--bloco" href="#busca">Buscar imóveis</a></div>
+        </div>
+      </div>
+
+      <!-- Busca logo abaixo do hero -->
+      <form class="legenda" id="busca" action="busca.html" method="get" aria-label="Buscar imóveis">
+        <div class="legenda__cel legenda__cel--neg">
+          <span class="legenda__rot" id="rot-neg">Quero</span>
+          <div class="alterna" role="radiogroup" aria-labelledby="rot-neg">
+            <input type="radio" name="neg" id="neg-venda" value="venda" checked><label for="neg-venda">Comprar</label>
+            <input type="radio" name="neg" id="neg-aluguel" value="aluguel"><label for="neg-aluguel">Alugar</label>
+          </div>
+        </div>
+        <div class="legenda__cel"><label for="f-tipo">Tipo</label><select id="f-tipo" name="tipo"><option value="">Todos</option></select></div>
+        <div class="legenda__cel"><label for="f-bairro">Bairro</label><select id="f-bairro" name="bairro"><option value="">Toda Macapá</option></select></div>
+        <div class="legenda__cel"><label for="f-quartos">Quartos</label>
+          <select id="f-quartos" name="quartos"><option value="">Qualquer</option><option value="1">1 ou mais</option><option value="2">2 ou mais</option><option value="3">3 ou mais</option></select></div>
+        <div class="legenda__cel"><label for="f-max">Valor até</label><select id="f-max" name="max"></select></div>
+        <button class="btn" type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <!-- Entradas por intenção -->
+    <section class="secao container" aria-labelledby="t-entradas">
+      <div class="secao__cab">
+        <h2 id="t-entradas">Por onde você quer começar?</h2>
+        <p>Do kitnet perto da UNIFAP à casa com piscina no Central. As faixas de valor abaixo são as dos imóveis disponíveis hoje.</p>
+      </div>
+      <div class="entradas" data-entradas></div>
+    </section>
+
+    <!-- Assinatura: plantas na mesma escala -->
+    <section class="secao escala" aria-labelledby="t-escala">
+      <div class="container">
+        <div class="secao__cab">
+          <h2 id="t-escala">Mesma escala, mesmo cuidado.</h2>
+          <p>Desenhamos a planta de cada imóvel na mesma régua. Um apartamento de 42 m² ao lado de uma casa de 252 m²: o tamanho muda, a atenção não.</p>
+        </div>
+        <div class="escala__quadro">
+          <div class="escala__plantas" data-escala></div>
+        </div>
+        <div class="escala__legendas" data-escala-leg></div>
+        <div class="regua" aria-hidden="true"><span class="regua__barra"><i></i><i></i><i></i><i></i><i></i></span><span>5 metros</span></div>
+      </div>
+    </section>
+
+    <!-- Seleção -->
+    <section class="secao container" aria-labelledby="t-selecao">
+      <div class="secao__cab">
+        <h2 id="t-selecao">Selecionados esta semana</h2>
+        <p>Imóveis novos na carteira, de todas as faixas de valor, misturados como chegaram.</p>
+      </div>
+      <div class="selecao">
+        <div class="selecao__destaque" data-destaque></div>
+        <ul class="selecao__lista" data-lista></ul>
+      </div>
+    </section>
+
+    <!-- Bairros -->
+    <section class="secao container" aria-labelledby="t-bairros">
+      <div class="secao__cab">
+        <h2 id="t-bairros">Onde estão os imóveis</h2>
+      </div>
+      <div class="bairros">
+        <p class="bairros__nota">Macapá é a única capital brasileira cortada pela <strong>Linha do Equador</strong>. No estádio Zerão, a linha do meio de campo coincide com ela. Escolha um bairro para ver o que temos lá.</p>
+        <ul class="bairros__lista" data-bairros></ul>
+      </div>
+    </section>
+
+    <!-- Anunciar -->
+    <section class="secao container" aria-labelledby="t-anunciar">
+      <div class="anunciar">
+        <div class="anunciar__txt">
+          <h2 id="t-anunciar">Tem um imóvel em Macapá para vender ou alugar?</h2>
+          <p>A gente visita, mede, fotografa e desenha a planta, seja um kitnet ou uma casa com piscina. Você só aprova o anúncio antes de ele ir ao ar.</p>
+          <ol class="passos" aria-label="Como funciona">
+            <li>Você conta sobre o imóvel</li><li>Visitamos e medimos</li><li>Publicamos com fotos e planta</li>
+          </ol>
+        </div>
+        <div class="anunciar__acao">
+          <a class="btn btn--bloco" href="anunciar.html">Anunciar meu imóvel</a>
+          <a class="acao" data-whats-geral href="#" target="_blank" rel="noopener">Prefiro falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape" data-rodape></footer>
+
+  <script src="data/imoveis.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
